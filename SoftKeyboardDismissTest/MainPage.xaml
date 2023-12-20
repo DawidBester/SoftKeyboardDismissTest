@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="SoftKeyboardDismissTest.MainPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+    HideSoftInputOnTapped="True"
+    NavigationPage.HasNavigationBar="False">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="30,0" Spacing="25">
+            <Label
+                FontSize="20"
+                SemanticProperties.HeadingLevel="Level1"
+                Text="Soft Keyboard Dismiss Tests" />
+            <Label
+                FontSize="14"
+                SemanticProperties.HeadingLevel="Level1"
+                Text="HideSoftInputOnTapped=&quot;True&quot;" />
+            <Label
+                FontSize="16"
+                SemanticProperties.HeadingLevel="Level1"
+                Text="Test 1: Entry" />
+
+            <Entry
+                BackgroundColor="LightGoldenrodYellow"
+                Placeholder="Enter Something"
+                TextColor="Black" />
+
+            <Label
+                FontSize="16"
+                SemanticProperties.HeadingLevel="Level1"
+                Text="Test 2: Entry wrapped in Expander" />
+
+            <toolkit:Expander IsExpanded="True">
+                <toolkit:Expander.Header>
+                    <Label
+                        BackgroundColor="LightGrey"
+                        HeightRequest="40"
+                        Text="Tap After Entering Something"
+                        TextColor="Black"
+                        VerticalTextAlignment="Center" />
+                </toolkit:Expander.Header>
+                <Entry
+                    BackgroundColor="LightGoldenrodYellow"
+                    Placeholder="Enter Something"
+                    TextColor="Black" />
+            </toolkit:Expander>
+
+            <Label
+                FontSize="16"
+                SemanticProperties.HeadingLevel="Level1"
+                Text="Test 3: Entry Programmatic Focus/UnFocus" />
+
+            <Button Clicked="Button_OnClicked" Text="Tap to set focus and then unfocus" />
+            <Entry
+                x:Name="Test3Entry"
+                BackgroundColor="LightGoldenrodYellow"
+                Placeholder="Tap "
+                TextColor="Black" />
+
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
