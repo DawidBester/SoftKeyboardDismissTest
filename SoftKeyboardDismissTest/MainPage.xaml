@@ -56,7 +56,6 @@
             <Entry
                 x:Name="Test3Entry"
                 BackgroundColor="LightGoldenrodYellow"
-                Placeholder="Tap "
                 TextColor="Black" />
 
 
