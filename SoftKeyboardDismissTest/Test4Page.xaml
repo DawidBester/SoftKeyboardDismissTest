@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="SoftKeyboardDismissTest.Test4Page"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:controls="using:SoftKeyboardDismissTest.Controls"
+    x:Name="Test4ContentPage"
+    Title="Test4"
+    HideSoftInputOnTapped="True"
+    NavigationPage.HasNavigationBar="False"
+    Visual="Default">
+
+    <Grid RowDefinitions="Auto, *">
+        <controls:PageHeader
+            x:Name="PageHeader"
+            Grid.Row="0"
+            BindingContext="{x:Reference Test4ContentPage}"
+            LeftButtonIcon="&lt;"
+            LeftButtonIconText="Back"
+            LeftButtonTappedCommand="{Binding LeftButtonCommand}"
+            PageTitleText="Test 4 Page" />
+
+        <VerticalStackLayout
+            Grid.Row="1"
+            Padding="5,20,5,5"
+            BackgroundColor="Gainsboro"
+            HorizontalOptions="Fill"
+            Spacing="5"
+            VerticalOptions="Fill">
+
+
+            <Label
+                FontSize="20"
+                SemanticProperties.HeadingLevel="Level1"
+                Text="Soft Keyboard Dismiss Tests" />
+            <Label
+                FontSize="14"
+                SemanticProperties.HeadingLevel="Level1"
+                Text="HideSoftInputOnTapped=&quot;True&quot;" />
+            <Label
+                FontSize="16"
+                SemanticProperties.HeadingLevel="Level1"
+                Text="Test 4: Enter value in Entry and then tap custom control orange &lt;Back navigation button" />
+
+            <Entry
+                BackgroundColor="LightGoldenrodYellow"
+                Placeholder="Enter Something"
+                TextColor="Black" />
+
+            <!--<Editor
+                AutoSize="TextChanges"
+                BackgroundColor="LightGoldenrodYellow"
+                Placeholder="Enter Some Text into Editor"
+                TextColor="Black" />-->
+
+            <Button
+                Margin="5,20,5,5"
+                BackgroundColor="OliveDrab"
+                Clicked="Button_OnClicked"
+                Text="Test 5: Bypass Custom Control to Navigate Back"
+                TextColor="White" />
+
+        </VerticalStackLayout>
+    </Grid>
+</ContentPage>

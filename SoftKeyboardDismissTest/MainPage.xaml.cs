@@ -17,6 +17,11 @@
             await Task.Delay(TimeSpan.FromSeconds(1));
             Test3Entry.Unfocus();
         }
+
+        private void ButtonNavigation_OnClicked(object? sender, EventArgs e)
+        {
+            Navigation.PushAsync(new Test4Page());
+        }
     }
 
 }

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<ContentView
+    x:Class="SoftKeyboardDismissTest.Controls.PageHeader"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:controls="using:SoftKeyboardDismissTest.Controls"
+    x:Name="PageHeaderGrid"
+    x:DataType="controls:PageHeader"
+    BackgroundColor="Wheat"
+    HorizontalOptions="Fill"
+    VerticalOptions="Fill">
+
+    <Grid
+        BindingContext="{x:Reference PageHeaderGrid}"
+        Grid.ColumnSpacing="0"
+        HorizontalOptions="Fill"
+        VerticalOptions="Fill">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="70" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="70" />
+        </Grid.ColumnDefinitions>
+
+        <Grid
+            Grid.Row="0"
+            Grid.Column="1"
+            HorizontalOptions="Fill"
+            RowSpacing="0"
+            VerticalOptions="Center">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Label
+                FontSize="16"
+                HorizontalOptions="Fill"
+                HorizontalTextAlignment="Center"
+                TextColor="Black"
+                VerticalOptions="Fill"
+                VerticalTextAlignment="End">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="Header Custom Control" TextColor="Gray" />
+
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+            <Label
+                x:Name="PageTitle"
+                Grid.Row="1"
+                HorizontalOptions="Fill"
+                HorizontalTextAlignment="Center"
+                LineBreakMode="WordWrap"
+                Style="{DynamicResource LabelHeaderNormalStyle}"
+                Text="{Binding PageTitleText, Mode=OneWay, FallbackValue='', TargetNullValue=''}"
+                VerticalOptions="Fill"
+                VerticalTextAlignment="Start" />
+            <!--  Grid.ColumnSpan="3"  -->
+        </Grid>
+
+        <Grid
+            x:Name="LeftButtonGrid"
+            Grid.Row="0"
+            Grid.Column="0"
+            BackgroundColor="SandyBrown"
+            HorizontalOptions="Fill"
+            IsVisible="{Binding LeftButtonGridIsVisible, FallbackValue=True}"
+            RowSpacing="0"
+            VerticalOptions="Center">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Label
+                FontFamily="{Binding LeftButtonIconFontFamily}"
+                FontSize="30"
+                HorizontalOptions="Fill"
+                HorizontalTextAlignment="Center"
+                
+                Text="{Binding LeftButtonIcon, FallbackValue='', TargetNullValue=''}"
+                TextColor="Black"
+                VerticalOptions="End"
+                VerticalTextAlignment="End"
+                Visual="Default" />
+            <Label
+                Grid.Row="1"
+                Grid.Column="0"
+                FontSize="10"
+                HorizontalOptions="Fill"
+                HorizontalTextAlignment="Center"
+                Text="{Binding LeftButtonIconText}"
+                TextColor="Black"
+                VerticalOptions="Fill"
+                VerticalTextAlignment="Start" />
+            <Grid.GestureRecognizers>
+                <TapGestureRecognizer Command="{Binding LeftButtonTappedCommand}" CommandParameter="{x:Reference LeftButtonGrid}" />
+            </Grid.GestureRecognizers>
+        </Grid>
+
+
+    </Grid>
+</ContentView>

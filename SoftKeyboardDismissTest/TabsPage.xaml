@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage
+    x:Class="SoftKeyboardDismissTest.TabsPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:android="clr-namespace:Microsoft.Maui.Controls.PlatformConfiguration.AndroidSpecific;assembly=Microsoft.Maui.Controls"
+    xmlns:ios="clr-namespace:Microsoft.Maui.Controls.PlatformConfiguration.iOSSpecific;assembly=Microsoft.Maui.Controls"
+    xmlns:softKeyboardDismissTest="using:SoftKeyboardDismissTest"
+    Title="TabsPage"
+    android:TabbedPage.IsSmoothScrollEnabled="false"
+    android:TabbedPage.IsSwipePagingEnabled="False"
+    android:TabbedPage.ToolbarPlacement="Bottom"
+    ios:Page.UseSafeArea="true"
+    NavigationPage.HasNavigationBar="False"
+    SelectedTabColor="CornflowerBlue"
+    UnselectedTabColor="DarkGray">
+
+
+    <NavigationPage Title="Tab1" BarTextColor="Gray">
+        <x:Arguments>
+            <softKeyboardDismissTest:MainPage />
+        </x:Arguments>
+
+    </NavigationPage>
+
+
+
+</TabbedPage>

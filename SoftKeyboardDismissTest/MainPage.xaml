@@ -58,6 +58,14 @@
                 BackgroundColor="LightGoldenrodYellow"
                 TextColor="Black" />
 
+            <Label
+                FontSize="16"
+                SemanticProperties.HeadingLevel="Level1"
+                Text="Test 4: Back Navigation and Entry" />
+
+            <Button Clicked="ButtonNavigation_OnClicked" Text="Tap to navigate to Test4Page" />
+
+
 
         </VerticalStackLayout>
     </ScrollView>
