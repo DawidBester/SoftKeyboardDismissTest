@@ -8,6 +8,8 @@ public partial class PageHeader : ContentView
     public PageHeader()
     {
         InitializeComponent();
+        
+        //HideSoftInputOnTapped
     }
     
     public static readonly BindableProperty LeftButtonGridIsVisibleProperty = BindableProperty.Create(
@@ -15,8 +17,7 @@ public partial class PageHeader : ContentView
         typeof(bool),
         typeof(Grid),
         true);
-
-
+    
     public bool LeftButtonGridIsVisible
     {
         get => (bool)GetValue(LeftButtonGridIsVisibleProperty);

@@ -6,12 +6,12 @@
     xmlns:controls="using:SoftKeyboardDismissTest.Controls"
     x:Name="Test4ContentPage"
     Title="Test4"
-    HideSoftInputOnTapped="True"
+    HideSoftInputOnTapped="True" 
     NavigationPage.HasNavigationBar="False"
     Visual="Default">
 
     <Grid RowDefinitions="Auto, *">
-        <controls:PageHeader
+        <controls:PageHeader 
             x:Name="PageHeader"
             Grid.Row="0"
             BindingContext="{x:Reference Test4ContentPage}"

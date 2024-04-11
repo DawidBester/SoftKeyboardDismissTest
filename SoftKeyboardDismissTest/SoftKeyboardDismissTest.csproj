@@ -65,9 +65,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<PackageReference Include="CommunityToolkit.Maui" Version="7.0.1" />
-		<PackageReference Include="Microsoft.Maui.Controls" Version="8.0.6-nightly.9796" />
-		<PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="8.0.6-nightly.9796" />
+		<PackageReference Include="CommunityToolkit.Maui" Version="8.0.1" />
+		<PackageReference Include="Microsoft.Maui.Controls" Version="8.0.40-nightly.10467" />
+		<PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="8.0.40-nightly.10467" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="8.0.0" />
 	</ItemGroup>
 
