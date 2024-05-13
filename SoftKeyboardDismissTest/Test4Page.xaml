@@ -10,7 +10,7 @@
     NavigationPage.HasNavigationBar="False"
     Visual="Default">
 
-    <Grid RowDefinitions="Auto, *">
+    <Grid RowDefinitions="Auto, *" x:Name="PageGrid">
         <controls:PageHeader 
             x:Name="PageHeader"
             Grid.Row="0"
@@ -20,7 +20,7 @@
             LeftButtonTappedCommand="{Binding LeftButtonCommand}"
             PageTitleText="Test 4 Page" />
 
-        <VerticalStackLayout
+        <VerticalStackLayout x:Name="PageVerticalStackLayout"
             Grid.Row="1"
             Padding="5,20,5,5"
             BackgroundColor="Gainsboro"
@@ -42,7 +42,8 @@
                 SemanticProperties.HeadingLevel="Level1"
                 Text="Test 4: Enter value in Entry and then tap custom control orange &lt;Back navigation button" />
 
-            <Entry
+            <Entry x:Name="Test4Entry" 
+                   Unfocused="Test4Entry_OnUnfocused"
                 BackgroundColor="LightGoldenrodYellow"
                 Placeholder="Enter Something"
                 TextColor="Black" />
@@ -56,7 +57,7 @@
             <Button
                 Margin="5,20,5,5"
                 BackgroundColor="OliveDrab"
-                Clicked="Button_OnClicked"
+                Clicked="LeftButton_OnClicked"
                 Text="Test 5: Bypass Custom Control to Navigate Back"
                 TextColor="White" />
 

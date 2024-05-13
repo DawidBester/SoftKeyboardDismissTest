@@ -22,7 +22,7 @@
                 SemanticProperties.HeadingLevel="Level1"
                 Text="Test 1: Entry" />
 
-            <Entry
+            <Entry 
                 BackgroundColor="LightGoldenrodYellow"
                 Placeholder="Enter Something"
                 TextColor="Black" />
@@ -41,7 +41,7 @@
                         TextColor="Black"
                         VerticalTextAlignment="Center" />
                 </toolkit:Expander.Header>
-                <Entry
+                <Entry x:Name="Test2Entry" Unfocused="Test2Entry_OnUnfocused"
                     BackgroundColor="LightGoldenrodYellow"
                     Placeholder="Enter Something"
                     TextColor="Black" />
@@ -52,8 +52,8 @@
                 SemanticProperties.HeadingLevel="Level1"
                 Text="Test 3: Entry Programmatic Focus/UnFocus" />
 
-            <Button Clicked="Button_OnClicked" Text="Tap to set focus and then unfocus" />
-            <Entry
+            <Button Clicked="Test3SetFocusAndUnfocusButton_OnClicked" Text="Tap to set focus and then unfocus" />
+            <Entry  Unfocused="Test3Entry_OnUnfocused"
                 x:Name="Test3Entry"
                 BackgroundColor="LightGoldenrodYellow"
                 TextColor="Black" />
